@@ -1,0 +1,5 @@
+# Raw trip data is too large for GitHub; download it from Divvy
+*.csv
+!tableau/data/*.csv
+*.zip
+.DS_Store

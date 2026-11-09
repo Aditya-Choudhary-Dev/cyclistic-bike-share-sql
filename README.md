@@ -22,7 +22,7 @@ Most versions of this case study stop at "casual riders take longer rides on wee
 |---|---|
 | Source | [Divvy trip data](https://divvy-tripdata.s3.amazonaws.com/index.html), Motivate International Inc., under [this licence](https://divvybikes.com/data-license-agreement) |
 | Period | April 2021 – March 2022 (12 monthly CSV files) |
-| Size | ~5.6 million trips, 13 columns |
+| Size | 5,723,532 trips loaded · 5,629,342 after cleaning · 13 columns |
 | One row = | one bike trip: start/end time, start/end station, coordinates, bike type, rider type (member or casual) |
 
 The CSV files are not in this repo (they're too large). Download them from the link above.
@@ -118,9 +118,15 @@ Full wording and the reasoning behind each one: [`docs/business_questions.md`](d
 
 ---
 
-## Results
+## Headline findings
 
-Key findings and the output of all 21 questions: [`results/`](results/)
+- **Two different casual riders.** Leisure riders cluster on the lakefront (Streeter Dr & Grand Ave alone has 66,502 casual rides). The 291,247 casual rides that look like commutes are mostly in River North, the West Loop and the Loop, so the marketing should split along those lines.
+- **Converting is worth less than it looks.** At 10% conversion, membership fees look like ~$210k, but after lost casual fares the real gain is ~$99k *(placeholder prices)*.
+- **Heavy riders shouldn't be converted.** Above ~38 rides a year, a casual rider pays more than a membership costs.
+- **Launch in April.** Casual riding nearly doubles from April to May and peaks in July.
+- **Data care matters.** 1.6% of trips were broken, 13.6% have no end station, and 23 stations were renamed or moved (for example the 2021 "DuSable Lake Shore Dr" rename).
+
+Full write-up of all 21 answers: [`results/README.md`](results/README.md) · raw output: [`results/answers_output.txt`](results/answers_output.txt)
 
 ## Tableau dashboards
 

@@ -1,0 +1,415 @@
+SET
+ rank |            station_name            |   zone_id   | rides | casual_rides | casual_share |              segment              
+------+------------------------------------+-------------+-------+--------------+--------------+-----------------------------------
+    1 | Streeter Dr & Grand Ave            | Z4189_-6740 | 82694 |        66502 |       0.8042 | Casual hotspot
+    2 | DuSable Lake Shore Dr & Monroe St  | Z4188_-6740 | 44924 |        34912 |       0.7771 | Casual hotspot
+    3 | Millennium Park                    | Z4188_-6741 | 41606 |        32837 |       0.7892 | Casual hotspot
+    4 | Michigan Ave & Oak St              | Z4190_-6741 | 43617 |        29302 |       0.6718 | Casual hotspot
+    5 | DuSable Lake Shore Dr & North Blvd | Z4191_-6741 | 47009 |        29209 |       0.6213 | Casual hotspot
+    6 | Shedd Aquarium                     | Z4186_-6740 | 27683 |        22882 |       0.8266 | Casual hotspot
+    7 | Theater on the Lake                | Z4192_-6741 | 35919 |        20841 |       0.5802 | Casual hotspot
+    8 | Wells St & Concord Ln              | Z4191_-6742 | 43504 |        19720 |       0.4533 | Up for grabs (high volume, mixed)
+    9 | Clark St & Lincoln Ave             | Z4191_-6742 | 32858 |        16764 |       0.5102 | Up for grabs (high volume, mixed)
+   10 | Wells St & Elm St                  | Z4190_-6742 | 37429 |        16441 |       0.4393 | Up for grabs (high volume, mixed)
+   11 | Clark St & Elm St                  | Z4190_-6741 | 40676 |        16162 |       0.3973 | Up for grabs (high volume, mixed)
+   12 | Indiana Ave & Roosevelt Rd         | Z4186_-6741 | 29237 |        16134 |       0.5518 | Casual hotspot
+   13 | Clark St & Armitage Ave            | Z4191_-6742 | 32355 |        16028 |       0.4954 | Up for grabs (high volume, mixed)
+   14 | Wabash Ave & Grand Ave             | Z4189_-6741 | 32840 |        15840 |       0.4823 | Up for grabs (high volume, mixed)
+   15 | New St & Illinois St               | Z4189_-6740 | 27280 |        15226 |       0.5581 | Casual hotspot
+   16 | Dusable Harbor                     | Z4188_-6740 | 20403 |        14999 |       0.7351 | Casual hotspot
+   17 | Michigan Ave & Lake St             | Z4188_-6741 | 25646 |        14261 |       0.5561 | Casual hotspot
+   18 | Michigan Ave & Washington St       | Z4188_-6741 | 25508 |        13910 |       0.5453 | Up for grabs (high volume, mixed)
+   19 | Michigan Ave & 8th St              | Z4187_-6741 | 19206 |        13277 |       0.6913 | Casual hotspot
+   20 | Larrabee St & Webster Ave          | Z4192_-6742 | 27603 |        13095 |       0.4744 | Up for grabs (high volume, mixed)
+(20 rows)
+
+ rider_type |  rides  | commute_pattern_rides | commute_pattern_share 
+------------+---------+-----------------------+-----------------------
+ member     | 3121699 |                713858 |                0.2287
+ casual     | 2507643 |                291247 |                0.1161
+(2 rows)
+
+            station_name            |   zone_id   | casual_commute_rides | share_of_pool 
+------------------------------------+-------------+----------------------+---------------
+ Streeter Dr & Grand Ave            | Z4189_-6740 |                 3980 |        0.0160
+ Wells St & Elm St                  | Z4190_-6742 |                 2369 |        0.0095
+ Clark St & Elm St                  | Z4190_-6741 |                 2215 |        0.0089
+ Wells St & Concord Ln              | Z4191_-6742 |                 2163 |        0.0087
+ Kingsbury St & Kinzie St           | Z4188_-6742 |                 2055 |        0.0083
+ Michigan Ave & Oak St              | Z4190_-6741 |                 1930 |        0.0078
+ Wells St & Huron St                | Z4189_-6742 |                 1901 |        0.0077
+ DuSable Lake Shore Dr & North Blvd | Z4191_-6741 |                 1875 |        0.0076
+ Millennium Park                    | Z4188_-6741 |                 1854 |        0.0075
+ Dearborn St & Erie St              | Z4189_-6741 |                 1678 |        0.0068
+ DuSable Lake Shore Dr & Monroe St  | Z4188_-6740 |                 1667 |        0.0067
+ Indiana Ave & Roosevelt Rd         | Z4186_-6741 |                 1659 |        0.0067
+ Clinton St & Washington Blvd       | Z4188_-6742 |                 1637 |        0.0066
+ Clinton St & Madison St            | Z4188_-6742 |                 1606 |        0.0065
+ Ashland Ave & Division St          | Z4190_-6744 |                 1602 |        0.0065
+(15 rows)
+
+ route_rank |                             route                             | rides | avg_ride_min 
+------------+---------------------------------------------------------------+-------+--------------
+          1 | DuSable Lake Shore Dr & Monroe St -> Streeter Dr & Grand Ave  |  5691 |         30.5
+          2 | Streeter Dr & Grand Ave -> Millennium Park                    |  3386 |         34.8
+          3 | Streeter Dr & Grand Ave -> DuSable Lake Shore Dr & Monroe St  |  3015 |         31.1
+          4 | Millennium Park -> Streeter Dr & Grand Ave                    |  3009 |         43.9
+          5 | Shedd Aquarium -> Streeter Dr & Grand Ave                     |  2879 |         35.8
+          6 | Streeter Dr & Grand Ave -> DuSable Lake Shore Dr & North Blvd |  2564 |         26.2
+          7 | Streeter Dr & Grand Ave -> Michigan Ave & Oak St              |  2530 |         27.4
+          8 | Dusable Harbor -> Streeter Dr & Grand Ave                     |  2336 |         27.1
+          9 | Michigan Ave & Oak St -> Streeter Dr & Grand Ave              |  2042 |         33.5
+         10 | DuSable Lake Shore Dr & North Blvd -> Streeter Dr & Grand Ave |  1949 |         25.2
+         11 | Streeter Dr & Grand Ave -> Theater on the Lake                |  1946 |         32.1
+         12 | DuSable Lake Shore Dr & Monroe St -> Shedd Aquarium           |  1860 |         28.6
+         13 | Shedd Aquarium -> Millennium Park                             |  1832 |         29.7
+         14 | Streeter Dr & Grand Ave -> Shedd Aquarium                     |  1741 |         32.4
+         15 | Shedd Aquarium -> DuSable Lake Shore Dr & Monroe St           |  1683 |         25.1
+(15 rows)
+
+              segment              | stations |  rides  | casual_share 
+-----------------------------------+----------+---------+--------------
+ Up for grabs (high volume, mixed) |      367 | 3336186 |       0.4331
+ Member stronghold                 |       96 |  799212 |       0.2803
+ Casual hotspot                    |      174 |  756506 |       0.6706
+ Low volume                        |      213 |   15106 |       0.7159
+(4 rows)
+
+ rank |   zone_id   | zone_lat | zone_lng  | stations | rides  | casual_rides | casual_share | casual_commute_rides |                                                      main_stations                                                       
+------+-------------+----------+-----------+----------+--------+--------------+--------------+----------------------+--------------------------------------------------------------------------------------------------------------------------
+    1 | Z4189_-6741 | 41.89485 | -87.62606 |       17 | 317149 |       138495 |       0.4367 |                15805 | Wabash Ave & Grand Ave | Dearborn St & Erie St | St. Clair St & Erie St | Fairbanks Ct & Grand Ave | LaSalle St & Illino
+    2 | Z4188_-6741 | 41.88458 | -87.62742 |       13 | 258366 |       133547 |       0.5169 |                13126 | Millennium Park | Michigan Ave & Lake St | Michigan Ave & Washington St | State St & Kinzie St | State St & Randolph St 
+    3 | Z4189_-6740 | 41.89256 | -87.61645 |        4 | 151832 |       101822 |       0.6706 |                 7525 | Streeter Dr & Grand Ave | New St & Illinois St | McClurg Ct & Ohio St | McClurg Ct & Erie St
+    4 | Z4187_-6741 | 41.87579 | -87.62761 |       15 | 168785 |        87499 |       0.5184 |                 8251 | Federal St & Polk St | Michigan Ave & 8th St | Wabash Ave & 9th St | Buckingham Fountain | LaSalle St & Jackson Blvd | M
+    5 | Z4188_-6742 | 41.88467 | -87.63945 |       14 | 257628 |        83979 |       0.3260 |                16303 | Kingsbury St & Kinzie St | Desplaines St & Kinzie St | Clinton St & Madison St | Wells St & Hubbard St | Clinton St & Wa
+    6 | Z4194_-6743 | 41.94523 | -87.65034 |        8 | 158924 |        73481 |       0.4624 |                 7681 | Wilton Ave & Belmont Ave | Halsted St & Roscoe St | Clark St & Newport St | Broadway & Cornelia Ave | Broadway & Wavelan
+    7 | Z4190_-6741 | 41.90352 | -87.62841 |        6 | 142470 |        70930 |       0.4979 |                 7436 | Michigan Ave & Oak St | Clark St & Elm St | Clark St & Schiller St | Rush St & Cedar St | Ritchie Ct & Banks St | N Clar
+    8 | Z4191_-6742 | 41.91436 | -87.63925 |        7 | 152560 |        70659 |       0.4632 |                 7373 | Wells St & Concord Ln | Clark St & Lincoln Ave | Clark St & Armitage Ave | Sedgwick St & North Ave | Larrabee St & Armit
+    9 | Z4188_-6740 | 41.88475 | -87.61665 |        4 | 102223 |        66737 |       0.6529 |                 4195 | DuSable Lake Shore Dr & Monroe St | Columbus Dr & Randolph St | Dusable Harbor | Field Blvd & South Water St
+   10 | Z4192_-6742 | 41.92501 | -87.63923 |        6 | 117244 |        57636 |       0.4916 |                 6152 | Larrabee St & Webster Ave | Clark St & Wrightwood Ave | Lakeview Ave & Fullerton Pkwy | Sedgwick St & Webster Ave | Linc
+(10 rows)
+
+ month_no | month | avg_casual_rides | share_of_year | growth_vs_prev_month | ramp_rank 
+----------+-------+------------------+---------------+----------------------+-----------
+        1 | Jan   |            18083 |        0.0072 |                      |        12
+        2 | Feb   |            20916 |        0.0083 |                0.157 |         6
+        3 | Mar   |            88110 |        0.0351 |                3.213 |         1
+        4 | Apr   |           134714 |        0.0537 |                0.529 |         3
+        5 | May   |           252934 |        0.1009 |                0.878 |         2
+        6 | Jun   |           364413 |        0.1453 |                0.441 |         4
+        7 | Jul   |           435347 |        0.1736 |                0.195 |         5
+        8 | Aug   |           407049 |        0.1623 |               -0.065 |         7
+        9 | Sep   |           358851 |        0.1431 |               -0.118 |         8
+       10 | Oct   |           253418 |        0.1011 |               -0.294 |         9
+       11 | Nov   |           105207 |        0.0420 |               -0.585 |        11
+       12 | Dec   |            68601 |        0.0274 |               -0.348 |        10
+(12 rows)
+
+ rider_type | day_type | start_hour | rides  | share_of_day_type | peak_rank 
+------------+----------+------------+--------+-------------------+-----------
+ casual     | Weekday  |         17 | 160955 |            0.3721 |         1
+ casual     | Weekday  |         18 | 148849 |            0.3441 |         2
+ casual     | Weekday  |         16 | 122717 |            0.2837 |         3
+ casual     | Weekend  |         14 |  85246 |            0.3344 |         1
+ casual     | Weekend  |         15 |  85104 |            0.3339 |         2
+ casual     | Weekend  |         13 |  84541 |            0.3317 |         3
+ member     | Weekday  |         17 | 269375 |            0.3875 |         1
+ member     | Weekday  |         18 | 223139 |            0.3210 |         2
+ member     | Weekday  |         16 | 202691 |            0.2916 |         3
+ member     | Weekend  |         12 |  63096 |            0.3351 |         1
+ member     | Weekend  |         13 |  62767 |            0.3334 |         2
+ member     | Weekend  |         15 |  62404 |            0.3315 |         3
+(12 rows)
+
+ start_month | casual_share | rolling_3m | same_month_last_year | yoy_change_pts 
+-------------+--------------+------------+----------------------+----------------
+ 2021-04-01  |       0.4056 |     0.4056 |                      |               
+ 2021-05-01  |       0.4838 |     0.4447 |                      |               
+ 2021-06-01  |       0.5082 |     0.4659 |                      |               
+ 2021-07-01  |       0.5381 |     0.5100 |                      |               
+ 2021-08-01  |       0.5137 |     0.5200 |                      |               
+ 2021-09-01  |       0.4819 |     0.5112 |                      |               
+ 2021-10-01  |       0.4083 |     0.4680 |                      |               
+ 2021-11-01  |       0.2974 |     0.3959 |                      |               
+ 2021-12-01  |       0.2819 |     0.3292 |                      |               
+ 2022-01-01  |       0.1776 |     0.2523 |                      |               
+ 2022-02-01  |       0.1852 |     0.2149 |                      |               
+ 2022-03-01  |       0.3163 |     0.2264 |                      |               
+(12 rows)
+
+ forecast_month | same_month_last_year | forecast_casual_rides | low | high | yoy_growth_used | months_compared 
+----------------+----------------------+-----------------------+-----+------+-----------------+-----------------
+ 2022-04-01     |               134714 |                       |     |      |                 |               0
+ 2022-05-01     |               252934 |                       |     |      |                 |               0
+ 2022-06-01     |               364413 |                       |     |      |                 |               0
+ 2022-07-01     |               435347 |                       |     |      |                 |               0
+ 2022-08-01     |               407049 |                       |     |      |                 |               0
+ 2022-09-01     |               358851 |                       |     |      |                 |               0
+(6 rows)
+
+ conversion_rate | new_members | naive_revenue_fees_only | net_revenue_change 
+-----------------+-------------+-------------------------+--------------------
+            0.05 |         728 |                  104776 |              49485
+            0.10 |        1456 |                  209552 |              98969
+            0.20 |        2912 |                  419104 |             197938
+(3 rows)
+
+ rides_per_year | revenue_as_casual | revenue_as_member | gain_from_converting |        verdict        | break_even_rides 
+----------------+-------------------+-------------------+----------------------+-----------------------+------------------
+              5 |             24.14 |            149.05 |               124.92 | Profitable to convert |             37.9
+             10 |             48.28 |            154.21 |               105.93 | Profitable to convert |             37.9
+             20 |             96.55 |            164.51 |                67.96 | Profitable to convert |             37.9
+             30 |            144.83 |            174.82 |                29.99 | Profitable to convert |             37.9
+             50 |            241.38 |            195.43 |               -45.94 | Cannibalising         |             37.9
+             75 |            362.07 |            221.20 |              -140.87 | Cannibalising         |             37.9
+            100 |            482.76 |            246.97 |              -235.79 | Cannibalising         |             37.9
+            150 |            724.13 |            298.50 |              -425.63 | Cannibalising         |             37.9
+(8 rows)
+
+ rider_type | duration_bucket |  rides  | share_of_rides | median_min | avg_fare_at_casual_price | share_of_casual_price_revenue 
+------------+-----------------+---------+----------------+------------+--------------------------+-------------------------------
+ casual     | 0-15 min        | 1179514 |         0.4704 |        8.8 |                     3.59 |                        0.2154
+ casual     | 15-30 min       |  728045 |         0.2903 |       20.7 |                     6.79 |                        0.2516
+ casual     | 30-60 min       |  383398 |         0.1529 |       39.4 |                    11.67 |                        0.2277
+ casual     | 60+ min         |  216686 |         0.0864 |       87.7 |                    27.69 |                        0.3052
+ member     | 0-15 min        | 2227178 |         0.7135 |        7.1 |                     3.09 |                        0.4758
+ member     | 15-30 min       |  666033 |         0.2134 |       19.9 |                     6.55 |                        0.3020
+ member     | 30-60 min       |  204534 |         0.0655 |       36.6 |                    11.11 |                        0.1573
+ member     | 60+ min         |   23954 |         0.0077 |       82.8 |                    39.12 |                        0.0649
+(8 rows)
+
+ season | weekend_casual_rides | weekday_casual_rides | weekend_share | share_of_annual_casual | casual_revenue 
+--------+----------------------+----------------------+---------------+------------------------+----------------
+ Summer |               480221 |               726588 |        0.3979 |                 0.4813 |        9579168
+ Autumn |               295777 |               421699 |        0.4122 |                 0.2861 |        5316117
+ Spring |               208668 |               267090 |        0.4386 |                 0.1897 |        4051736
+ Winter |                32185 |                75415 |        0.2991 |                 0.0429 |         709530
+(4 rows)
+
+ rider_type |   bike_type   |  rides  | share_of_rider_type | avg_min | avg_km_one_way | avg_revenue_per_ride 
+------------+---------------+---------+---------------------+---------+----------------+----------------------
+ casual     | classic_bike  | 1242099 |              0.4953 |    26.6 |           2.35 |                 5.78
+ casual     | docked_bike   |  300701 |              0.1199 |    50.5 |           2.54 |                10.08
+ casual     | electric_bike |  964843 |              0.3848 |    20.0 |           2.64 |                 9.79
+ member     | classic_bike  | 1963297 |              0.6289 |    13.8 |           2.07 |                 0.15
+ member     | electric_bike | 1158402 |              0.3711 |    12.7 |           2.39 |                 2.28
+(5 rows)
+
+DROP TABLE
+SELECT 3
+ treatment_zone | control_zone | pre_period_correlation | days_compared | min_detectable_effect_pts 
+----------------+--------------+------------------------+---------------+---------------------------
+ Z4188_-6741    | Z4187_-6741  |                  0.971 |           365 |                      1.87
+ Z4189_-6740    | Z4190_-6741  |                  0.934 |           365 |                      3.12
+ Z4189_-6741    | Z4188_-6742  |                  0.969 |           365 |                      1.75
+(3 rows)
+
+ treatment_zone | control_zone | did_effect_pts | min_detectable_effect_pts |         placebo_check         
+----------------+--------------+----------------+---------------------------+-------------------------------
+ Z4188_-6741    | Z4187_-6741  |           0.27 |                      1.87 | Within noise (placebo passes)
+ Z4189_-6740    | Z4190_-6741  |          -3.39 |                      3.12 | Exceeds noise: check pairing
+ Z4189_-6741    | Z4188_-6742  |          -4.61 |                      1.75 | Exceeds noise: check pairing
+(3 rows)
+
+ problem |            station_name             |   zone_id   | net_bikes_per_weekday | worst_drain_hour | worst_fill_hour 
+---------+-------------------------------------+-------------+-----------------------+------------------+-----------------
+ Drains  | Columbus Dr & Randolph St           | Z4188_-6740 |                 -9.49 |                5 |               0
+ Drains  | Desplaines St & Kinzie St           | Z4188_-6742 |                 -6.16 |                8 |              20
+ Drains  | DuSable Lake Shore Dr & Monroe St   | Z4188_-6740 |                 -5.03 |               11 |              17
+ Drains  | Orleans St & Merchandise Mart Plaza | Z4188_-6742 |                 -4.45 |               17 |               8
+ Drains  | Sedgwick St & Huron St              | Z4189_-6742 |                 -4.36 |               17 |              22
+ Drains  | Wells St & Walton St                | Z4189_-6742 |                 -4.26 |                7 |              17
+ Drains  | Stetson Ave & South Water St        | Z4188_-6741 |                 -4.14 |               16 |               8
+ Drains  | Michigan Ave & 8th St               | Z4187_-6741 |                 -4.01 |                9 |              22
+ Drains  | Field Museum                        | Z4186_-6740 |                 -4.00 |               16 |              18
+ Drains  | Cityfront Plaza Dr & Pioneer Ct     | Z4189_-6741 |                 -3.99 |               21 |               8
+ Fills   | DuSable Lake Shore Dr & North Blvd  | Z4191_-6741 |                 19.55 |               20 |              18
+ Fills   | Sheffield Ave & Waveland Ave        | Z4194_-6743 |                 11.11 |               21 |              18
+ Fills   | Morgan St & Lake St                 | Z4188_-6743 |                  3.95 |               16 |               8
+ Fills   | St. Clair St & Erie St              | Z4189_-6741 |                  2.70 |               16 |               7
+ Fills   | Damen Ave & Pierce Ave              | Z4190_-6745 |                  2.63 |               23 |               7
+ Fills   | Southport Ave & Roscoe St           | Z4194_-6744 |                  2.51 |               17 |               7
+ Fills   | Green St & Madison St               | Z4188_-6743 |                  2.49 |                7 |              16
+ Fills   | Logan Blvd & Elston Ave             | Z4192_-6745 |                  2.09 |               22 |              18
+ Fills   | Burling St & Diversey Pkwy          | Z4193_-6743 |                  2.01 |                8 |              17
+ Fills   | Clark St & Berwyn Ave               | Z4197_-6744 |                  1.93 |               21 |               9
+(20 rows)
+
+ expansion_priority | station_name | zone_id | rides_current | rides_prior | yoy_growth | peak_hour_rides_per_day | demand_rank | growth_rank 
+--------------------+--------------+---------+---------------+-------------+------------+-------------------------+-------------+-------------
+(0 rows)
+
+ start_month | raw_rides | non_positive_duration | false_starts_under_1_min | over_24_hours | impossible_speed | kept_but_no_end_station | removed_share 
+-------------+-----------+-----------------------+--------------------------+---------------+------------------+-------------------------+---------------
+ 2021-04-01  |    337230 |                    38 |                     4770 |           255 |               16 |                   26843 |        0.0151
+ 2021-05-01  |    531633 |                    54 |                     8336 |           442 |               29 |                   55577 |        0.0167
+ 2021-06-01  |    729595 |                    66 |                    11830 |           665 |               33 |                   82496 |        0.0173
+ 2021-07-01  |    822410 |                    82 |                    12568 |           611 |               54 |                   89374 |        0.0162
+ 2021-08-01  |    804352 |                   107 |                    11302 |           515 |               62 |                   90780 |        0.0149
+ 2021-09-01  |    756147 |                   107 |                    10855 |           415 |               79 |                   95899 |        0.0152
+ 2021-10-01  |    631226 |                    70 |                     9867 |           455 |               98 |                  111177 |        0.0166
+ 2021-11-01  |    359978 |                    86 |                     5820 |           185 |               98 |                   76918 |        0.0172
+ 2021-12-01  |    247540 |                    21 |                     3889 |           157 |               94 |                   51824 |        0.0168
+ 2022-01-01  |    103770 |                     5 |                     1846 |            88 |               14 |                   17083 |        0.0188
+ 2022-02-01  |    115609 |                     5 |                     2553 |            88 |               19 |                   19241 |        0.0231
+ 2022-03-01  |    284042 |                    18 |                     5080 |           262 |               81 |                   48898 |        0.0192
+(12 rows)
+
+         start_station         | trips | no_end_station | no_end_rate 
+-------------------------------+-------+----------------+-------------
+ Long Ave & Belden Ave         |   222 |            184 |      0.8288
+ Lamon Ave & Armitage Ave      |   204 |            164 |      0.8039
+ Mulligan Ave & Wellington Ave |   306 |            243 |      0.7941
+ Lamon Ave & Belmont Ave       |   327 |            259 |      0.7920
+ Kilbourn & Belden             |   244 |            186 |      0.7623
+ Narragansett & Wrightwood     |   258 |            189 |      0.7326
+ Kilpatrick Ave & Parker Ave   |   243 |            175 |      0.7202
+ Kostner Ave & Wrightwood Ave  |   300 |            214 |      0.7133
+ Halsted St & 111th St         |   214 |            139 |      0.6495
+ Kilbourn & Roscoe             |   272 |            176 |      0.6471
+(10 rows)
+
+   bike_type   | trips_checked | impossible | impossible_rate | median_speed_kmh_clean 
+---------------+---------------+------------+-----------------+------------------------
+ classic_bike  |       2872624 |          5 |          0.0000 |                    9.9
+ docked_bike   |        227051 |          0 |          0.0000 |                    6.0
+ electric_bike |       1905646 |        672 |          0.0004 |                   12.7
+(3 rows)
+
+     ride_id      |   bike_type   | rider_type |              start_station_name              |               end_station_name               | straight_line_km | minutes | implied_kmh 
+------------------+---------------+------------+----------------------------------------------+----------------------------------------------+------------------+---------+-------------
+ 3327172413547F64 | electric_bike | casual     | Pawel Bialowas - Test- PBSC charging station | Pawel Bialowas - Test- PBSC charging station |          1189.52 |     2.6 |       27628
+ 37E8C8DA45E35791 | classic_bike  | casual     | Michigan Ave & Oak St                        |                                              |             3.46 |     1.5 |         140
+ 9F438AD0AB380E3F | electric_bike | casual     | Narragansett & McLean                        |                                              |           114.38 |    55.1 |         125
+ EB5FF6552FCAD9DE | classic_bike  | casual     | Pine Grove Ave & Waveland Ave                |                                              |             6.71 |     3.6 |         111
+ 65919F3CBE816CE6 | electric_bike | casual     |                                              |                                              |             1.39 |     1.1 |          74
+ CAD8F638D3BD37B6 | electric_bike | casual     |                                              |                                              |             1.39 |     1.2 |          72
+ CBF41C91FF8C10E2 | electric_bike | member     |                                              |                                              |             1.39 |     1.2 |          70
+ EF8EDC133E481ACC | classic_bike  | member     | Lincoln Ave & Belmont Ave                    | Lincoln Ave & Diversey Pkwy                  |             1.13 |     1.0 |          68
+ 2AC8DF304C6B8CC0 | electric_bike | casual     |                                              |                                              |             1.11 |     1.0 |          67
+ A7CC31BAA8FF1969 | electric_bike | casual     |                                              |                                              |             1.11 |     1.0 |          67
+(10 rows)
+
+DROP TABLE
+SELECT 365
+ start_date | weekday | rides | typical_rides | robust_z | is_anomaly | explanation 
+------------+---------+-------+---------------+----------+------------+-------------
+ 2022-03-17 | Thu     | 15900 |          6925 |    46.21 | t          | 
+ 2022-03-05 | Sat     | 18474 |        5382.5 |    20.09 | t          | 
+ 2021-08-09 | Mon     | 16828 |         22936 |   -13.69 | t          | 
+ 2021-06-26 | Sat     | 14413 |       34817.5 |   -13.43 | t          | 
+ 2021-07-11 | Sun     | 13011 |       30926.5 |   -10.44 | t          | 
+ 2021-10-29 | Fri     |  7293 |         21456 |    -9.40 | t          | 
+ 2021-09-22 | Wed     | 16902 |         24104 |    -8.54 | t          | 
+ 2022-03-15 | Tue     | 10625 |          8559 |     7.18 | t          | 
+ 2021-04-07 | Wed     | 15274 |        7467.5 |     6.14 | t          | 
+ 2022-02-02 | Wed     |   685 |        5080.5 |    -5.70 | t          | 
+ 2021-05-09 | Sun     |  7215 |         23163 |    -5.49 | t          | 
+ 2021-09-06 | Mon     | 28607 |         21481 |     5.30 | t          | 
+ 2021-06-24 | Thu     | 15046 |         24189 |    -4.57 | t          | 
+ 2021-07-07 | Wed     | 22650 |         25088 |    -4.50 | t          | 
+ 2022-02-11 | Fri     |  5506 |          3067 |     4.44 | t          | 
+ 2022-03-20 | Sun     | 16844 |          7612 |     4.22 | t          | 
+ 2022-01-22 | Sat     |  4018 |          2541 |     3.98 | t          | 
+ 2021-11-08 | Mon     | 17233 |          9811 |     3.65 | t          | 
+ 2022-03-16 | Wed     | 18643 |          8949 |     3.53 | t          | 
+ 2021-10-01 | Fri     | 26751 |         21456 |     3.52 | t          | 
+(20 rows)
+
+             station_id              | version_no |              station_name              | valid_from |  valid_to  | change_type | moved_metres 
+-------------------------------------+------------+----------------------------------------+------------+------------+-------------+--------------
+ 13099                               |          1 | Halsted St & 18th St                   | 2021-03-29 | 2021-07-25 | original    |             
+ 13099                               |          2 | Halsted St & 18th St (Temp)            | 2021-07-26 | 2021-12-12 | renamed     |           97
+ 13099                               |          3 | Halsted St & 18th St                   | 2021-12-13 | 9999-12-31 | renamed     |          102
+ 13300                               |          1 | Lake Shore Dr & Monroe St              | 2021-03-29 | 2021-07-18 | original    |             
+ 13300                               |          2 | DuSable Lake Shore Dr & Monroe St      | 2021-07-19 | 9999-12-31 | renamed     |            0
+ 15539                               |          1 | Desplaines St & Jackson Blvd           | 2021-03-29 | 2021-05-16 | original    |             
+ 15539                               |          2 | Desplaines St & Jackson Blvd           | 2021-05-17 | 2021-08-15 | relocated   |          180
+ 15539                               |          3 | Desplaines St & Jackson Blvd           | 2021-08-16 | 9999-12-31 | relocated   |          161
+ 15541                               |          1 | Buckingham Fountain                    | 2021-03-29 | 2021-07-18 | original    |             
+ 15541                               |          2 | Buckingham Fountain                    | 2021-07-19 | 2021-08-15 | relocated   |          800
+ 15541                               |          3 | Buckingham Fountain                    | 2021-08-16 | 9999-12-31 | relocated   |          805
+ 16994                               |          1 | Kilbourn Ave & Milwaukee Ave           | 2021-03-29 | 2021-05-23 | original    |             
+ 16994                               |          2 | Kilbourn Ave & Milwaukee Ave           | 2021-05-24 | 9999-12-31 | relocated   |          194
+ 20110                               |          1 | Eberhart Ave & 91st St                 | 2021-04-05 | 2022-03-20 | original    |             
+ 20110                               |          2 | Eberhart Ave & 91st St                 | 2022-03-21 | 2022-03-27 | relocated   |        22451
+ 20110                               |          3 | Eberhart Ave & 91st St                 | 2022-03-28 | 9999-12-31 | relocated   |        22422
+ 20223                               |          1 | Ewing Ave & Burnham Greenway           | 2021-03-29 | 2022-02-06 | original    |             
+ 20223                               |          2 | Ewing Ave & Burnham Greenway           | 2022-02-07 | 2022-02-27 | relocated   |        21435
+ 20223                               |          3 | Ewing Ave & Burnham Greenway           | 2022-02-28 | 2022-03-27 | relocated   |        21435
+ 20223                               |          4 | Ewing Ave & Burnham Greenway           | 2022-03-28 | 9999-12-31 | relocated   |        26980
+ 393                                 |          1 | Oketo Ave & Addison St                 | 2021-08-23 | 2021-10-03 | original    |             
+ 393                                 |          2 | Oketo Ave & Addison St                 | 2021-10-04 | 2021-10-10 | relocated   |         1112
+ 393                                 |          3 | Oketo Ave & Addison St                 | 2021-10-11 | 2021-10-24 | relocated   |         1112
+ 393                                 |          4 | Oketo Ave & Addison St                 | 2021-10-25 | 2021-10-31 | relocated   |         1112
+ 393                                 |          5 | Oketo Ave & Addison St                 | 2021-11-01 | 2021-11-07 | relocated   |          556
+ 393                                 |          6 | Oketo Ave & Addison St                 | 2021-11-08 | 2021-11-21 | relocated   |          556
+ 393                                 |          7 | Oketo Ave & Addison St                 | 2021-11-22 | 2021-11-28 | relocated   |          556
+ 393                                 |          8 | Oketo Ave & Addison St                 | 2021-11-29 | 2021-12-12 | relocated   |          556
+ 393                                 |          9 | Oketo Ave & Addison St                 | 2021-12-13 | 2022-01-16 | relocated   |         1112
+ 393                                 |         10 | Oketo Ave & Addison St                 | 2022-01-17 | 2022-02-13 | relocated   |         1112
+ 393                                 |         11 | Oketo Ave & Addison St                 | 2022-02-14 | 2022-02-27 | relocated   |         1112
+ 393                                 |         12 | Oketo Ave & Addison St                 | 2022-02-28 | 9999-12-31 | relocated   |         1112
+ 441                                 |          1 | Virginia Ave & Catalpa Ave             | 2021-11-08 | 2021-11-14 | original    |             
+ 441                                 |          2 | Virginia Ave & Catalpa Ave             | 2021-11-15 | 2021-12-26 | relocated   |          413
+ 441                                 |          3 | Virginia Ave & Catalpa Ave             | 2021-12-27 | 2022-01-09 | relocated   |          413
+ 441                                 |          4 | Virginia Ave & Catalpa Ave             | 2022-01-10 | 2022-01-30 | relocated   |          413
+ 441                                 |          5 | Virginia Ave & Catalpa Ave             | 2022-01-31 | 2022-02-06 | relocated   |          827
+ 441                                 |          6 | Virginia Ave & Catalpa Ave             | 2022-02-07 | 2022-02-20 | relocated   |          413
+ 441                                 |          7 | Virginia Ave & Catalpa Ave             | 2022-02-21 | 2022-03-13 | relocated   |          413
+ 441                                 |          8 | Virginia Ave & Catalpa Ave             | 2022-03-14 | 2022-03-20 | relocated   |          413
+ 441                                 |          9 | Virginia Ave & Catalpa Ave             | 2022-03-21 | 9999-12-31 | relocated   |          413
+ 444                                 |          1 | N Shore Channel Trail & Argyle Ave     | 2021-11-15 | 2022-02-20 | original    |             
+ 444                                 |          2 | N Shore Channel Trail & Argyle St      | 2022-02-21 | 9999-12-31 | renamed     |            0
+ 647                                 |          1 | Elizabeth St & 59th St                 | 2021-04-05 | 2021-08-08 | original    |             
+ 647                                 |          2 | Elizabeth St & 59th St                 | 2021-08-09 | 9999-12-31 | relocated   |          348
+ DIVVY 001                           |          1 | WEST CHI-WATSON                        | 2021-07-12 | 2022-03-20 | original    |             
+ DIVVY 001                           |          2 | WEST CHI-WATSON                        | 2022-03-21 | 2022-03-27 | relocated   |         8721
+ DIVVY 001                           |          3 | WEST CHI-WATSON                        | 2022-03-28 | 9999-12-31 | relocated   |        14393
+ Hubbard Bike-checking (LBS-WH-TEST) |          1 | Base - 2132 W Hubbard Warehouse        | 2021-04-05 | 2022-02-06 | original    |             
+ Hubbard Bike-checking (LBS-WH-TEST) |          2 | Base - 2132 W Hubbard Warehouse        | 2022-02-07 | 2022-02-13 | relocated   |          551
+ Hubbard Bike-checking (LBS-WH-TEST) |          3 | Base - 2132 W Hubbard Warehouse        | 2022-02-14 | 2022-02-20 | relocated   |         1779
+ Hubbard Bike-checking (LBS-WH-TEST) |          4 | Base - 2132 W Hubbard Warehouse        | 2022-02-21 | 2022-02-27 | relocated   |         2248
+ Hubbard Bike-checking (LBS-WH-TEST) |          5 | Base - 2132 W Hubbard Warehouse        | 2022-02-28 | 2022-03-06 | relocated   |          906
+ Hubbard Bike-checking (LBS-WH-TEST) |          6 | Base - 2132 W Hubbard Warehouse        | 2022-03-07 | 2022-03-13 | relocated   |          906
+ Hubbard Bike-checking (LBS-WH-TEST) |          7 | Base - 2132 W Hubbard Warehouse        | 2022-03-14 | 2022-03-20 | relocated   |         1117
+ Hubbard Bike-checking (LBS-WH-TEST) |          8 | Base - 2132 W Hubbard Warehouse        | 2022-03-21 | 9999-12-31 | relocated   |         1117
+ KA1503000010                        |          1 | Halsted St & 51st St                   | 2021-04-05 | 2021-07-18 | original    |             
+ KA1503000010                        |          2 | Halsted St & 51st St                   | 2021-07-19 | 2021-07-25 | relocated   |         1086
+ KA1503000010                        |          3 | Halsted St & 51st St                   | 2021-07-26 | 2022-01-23 | relocated   |         1086
+ KA1503000010                        |          4 | Halsted St & 51st St                   | 2022-01-24 | 2022-01-30 | relocated   |         8031
+ KA1503000010                        |          5 | Halsted St & 51st St                   | 2022-01-31 | 9999-12-31 | relocated   |         8031
+ KA1504000117                        |          1 | Halsted St & North Branch St           | 2021-03-29 | 2021-11-14 | original    |             
+ KA1504000117                        |          2 | Halsted St & North Branch St           | 2021-11-15 | 2021-12-12 | relocated   |          540
+ KA1504000117                        |          3 | Halsted St & North Branch St           | 2021-12-13 | 9999-12-31 | relocated   |          535
+ LF-005                              |          1 | Lake Shore Dr & North Blvd             | 2021-03-29 | 2021-07-18 | original    |             
+ LF-005                              |          2 | DuSable Lake Shore Dr & North Blvd     | 2021-07-19 | 9999-12-31 | renamed     |            0
+ TA1305000039                        |          1 | Marshfield Ave & Cortland St           | 2021-03-29 | 2021-05-23 | original    |             
+ TA1305000039                        |          2 | Elston Ave & Cortland St               | 2021-05-24 | 9999-12-31 | renamed     |          182
+ TA1306000029                        |          1 | Lake Shore Dr & Ohio St                | 2021-03-29 | 2021-07-18 | original    |             
+ TA1306000029                        |          2 | DuSable Lake Shore Dr & Ohio St        | 2021-07-19 | 2021-12-12 | renamed     |            0
+ TA1306000029                        |          3 | McClurg Ct & Ohio St                   | 2021-12-13 | 9999-12-31 | renamed     |          232
+ TA1307000041                        |          1 | Lake Shore Dr & Wellington Ave         | 2021-03-29 | 2021-07-18 | original    |             
+ TA1307000041                        |          2 | DuSable Lake Shore Dr & Wellington Ave | 2021-07-19 | 9999-12-31 | renamed     |            0
+ TA1308000045                        |          1 | Wallace St & 35th St                   | 2021-03-29 | 2021-10-10 | original    |             
+ TA1308000045                        |          2 | Wallace St & 35th St                   | 2021-10-11 | 2021-12-12 | relocated   |          448
+ TA1308000045                        |          3 | Wallace St & 35th St                   | 2021-12-13 | 9999-12-31 | relocated   |          405
+ TA1309000039                        |          1 | Lake Shore Dr & Diversey Pkwy          | 2021-03-29 | 2021-07-18 | original    |             
+ TA1309000039                        |          2 | DuSable Lake Shore Dr & Diversey Pkwy  | 2021-07-19 | 9999-12-31 | renamed     |            0
+ TA1309000049                        |          1 | Lake Shore Dr & Belmont Ave            | 2021-03-29 | 2021-07-18 | original    |             
+ TA1309000049                        |          2 | DuSable Lake Shore Dr & Belmont Ave    | 2021-07-19 | 9999-12-31 | renamed     |            0
+ TA1309000058                        |          1 | Lincoln Ave & Fullerton Ave            | 2021-03-29 | 2021-10-10 | original    |             
+ TA1309000058                        |          2 | Lincoln Ave & Fullerton Ave            | 2021-10-11 | 9999-12-31 | relocated   |          307
+(82 rows)
+
+       start_station_name        | ids |     station_ids     
+---------------------------------+-----+---------------------
+ Lakefront Trail & Bryn Mawr Ave |   2 | 15576, KA1504000152
+ Loomis St & 89th St             |   2 | 20102, 201022
+(2 rows)
+
+ stations | station_versions | stations_with_drift 
+----------+------------------+---------------------
+      850 |              909 |                  23
+(1 row)
+
